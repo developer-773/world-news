@@ -16,8 +16,8 @@ const elTemplate = document.querySelector("#template").content;
 const elCarouselTemplate = document.querySelector("#carousel__template").content;
 const fragment = document.createDocumentFragment()
 
-let apikey = 'f5bc10107739b9a4d2a1377fa0b98107';
-let apikey2 = "dd8f05964ceadeecdfcaa5db64b2ee75"
+let apikey1 = 'f5bc10107739b9a4d2a1377fa0b98107';
+let apikey = "dd8f05964ceadeecdfcaa5db64b2ee75"
 let apikey3 = "4dc6edcc2ee205636458d42198f38e5d"
 let apikey4 = "090b779363cb6b9ca2169d844db65f5b"
 let apikey5 = "804f268e33da129a273a677ba5129452"
@@ -118,8 +118,7 @@ async function renderNews(url, arr) {
         else if (response.status === 403) {
             document.body.innerHTML = ""
             let txt = "Too many requests"
-            document.write(`<h2 id='bad' style="text-align:center"> ${txt}</h2>`)
-            
+            document.write(`<h2 id='bad' style="text-align:center"> ${txt}</h2>`)  
         }
         else if (response.status === 429) {
             document.body.innerHTML = ""
@@ -156,26 +155,20 @@ async function showCarousel(url) {
 }
 
 
-//Navigation list search function 
-
-
 // Navigation list search
 
-setTimeout(() => {
+
+elHeaderList.addEventListener("click", (evt) =>{
+    evt.preventDefault();
+    elLastNews.innerHTML = "";
+    elList.classList.add("d-none");
+    elCarouselList.classList.add("d-none");
+    elSearchResult.classList.add("d-none");
+    elLastTitle.innerHTML = evt.target.innerHTML;
+    let searchNews = `https://gnews.io/api/v4/search?q=${evt.target.innerHTML}&token=${apikey}&to=${finaly}&lang=en`;
     
-    elHeaderList.addEventListener("click", (evt) =>{
-        evt.preventDefault();
-        elLastNews.innerHTML = "";
-        elList.classList.add("d-none");
-        elCarouselList.classList.add("d-none");
-        elSearchResult.classList.add("d-none");
-        elLastTitle.innerHTML = evt.target.innerHTML;
-        let searchNews = `https://gnews.io/api/v4/search?q=${evt.target.innerHTML}&token=${apikey}&to=${finaly}&lang=en`;
-        
-        renderNews(searchNews, elLastNews)
-    })
-    
-}, 300);
+    renderNews(searchNews, elLastNews)
+})
 
 
 
@@ -192,25 +185,26 @@ setTimeout(() => {
         const value = elFormInput.value.trim();
         elLastTitle.innerHTML = "Results";
         elSearchResult.children[1].innerHTML = value
-        
-        console.log(evt.value)
         let searchNews = `https://gnews.io/api/v4/search?q=${value}&token=${apikey}&to=${finaly}&lang=en`;
         
         renderNews(searchNews, elLastNews)
     });
     
-}, 350);
+}, 4020);
+
+showCarousel(lastNews)
 
 setTimeout(() => {
-    
-    showCarousel(lastNews)
-    renderNews(lastNews, elLastNews)
     renderNews(lastPrevNews, elList, newsDate)
+}, 2000);
+
+setTimeout(() => {
+    renderNews(lastNews, elLastNews) 
+}, 3000);
+
+setTimeout(() => {
     renderNews(heroSidebarNews, elTopArticles)
-    
-}, 280);
-
-
+}, 4000);
 
 
 // console.log(new Date(changed));
