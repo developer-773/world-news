@@ -113,6 +113,7 @@ a {
 .hero__wrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .carousel__list {
