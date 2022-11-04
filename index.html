@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepper - The truth will be bitter.</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./images/favicon.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./flickity.min.css" media="screen">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__wrap d-flex justify-content-between">
+                <a class="header__logo" href="./index.html">
+                    <img src="./images/pepper-logo.jpeg" width="140" height="110" alt="Pepper's logo">
+                </a>
+                <div class="header__right">    
+                    <nav>
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a class="header__link" href="#">WORLD</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="">SOCIETY</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="">BUSINESS</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="">TECH</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="">CULTURE</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="">SPORT</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="">TOURISM</a>
+                            </li>
+                        </ul>
+                    </nav>   
+                    <form id="form">
+                        <input id="form__input" class="form-control" type="search">
+                        <button id="form__btn" type="submit"></button>
+                    </form>
+                </div>
+            </div>
+            <div class="search__result-box d-none">
+                <span class="text-secondary fs-5 fw-bolder">Search result:</span>
+                <span class="result">Tesla</span>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">  
+               
+                <div class="hero__wrap">
+                    <ul class="js-flickity carousel__list" data-flickity='{ "autoPlay": 3500 }'>                        
+                        <li class="carousel__item">
+                            <a class="carousel__news-link" href="#">
+                                <img class="carousel__news-img" src="" width="675" height="563" alt="">
+                                <div class="carousel__news-content-box"> 
+                                    <h2 class="carousel__news-title"></h2>
+                                    <time class="carousel__news-time"></time>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__item">
+                            <a class="carousel__news-link" href="#">
+                                <img class="carousel__news-img" src="" width="675" height="563" alt="">
+                                <div class="carousel__news-content-box"> 
+                                    <h2 class="carousel__news-title"></h2>
+                                    <time class="carousel__news-time"></time>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__item">
+                            <a class="carousel__news-link" href="#">
+                                <img class="carousel__news-img" src="" width="675" height="563" alt="">
+                                <div class="carousel__news-content-box"> 
+                                    <h2 class="carousel__news-title"></h2>
+                                    <time class="carousel__news-time"></time>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__item">
+                            <a class="carousel__news-link" href="#">
+                                <img class="carousel__news-img" src="" width="675" height="563" alt="">
+                                <div class="carousel__news-content-box"> 
+                                    <h2 class="carousel__news-title"></h2>
+                                    <time class="carousel__news-time"></time>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__item">
+                            <a class="carousel__news-link" href="#">
+                                <img class="carousel__news-img" src="" width="675" height="563" alt="">
+                                <div class="carousel__news-content-box"> 
+                                    <h2 class="carousel__news-title"></h2>
+                                    <time class="carousel__news-time"></time>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__item">
+                            <a class="carousel__news-link" href="#">
+                                <img class="carousel__news-img" src="" width="675" height="563" alt="">
+                                <div class="carousel__news-content-box"> 
+                                    <h2 class="carousel__news-title"></h2>
+                                    <time class="carousel__news-time"></time>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__item">
+                            <a class="carousel__news-link" href="#">
+                                <img class="carousel__news-img" src="" width="675" height="563" alt="">
+                                <div class="carousel__news-content-box"> 
+                                    <h2 class="carousel__news-title"></h2>
+                                    <time class="carousel__news-time"></time>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="news__list"></ul> 
+                </div>
+            </div>
+        </section>
+        <section class="last">
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-8">
+                        <h3 class="last__title">Last News</h3>
+                        <ul class="last__list  d-flex flex-wrap justify-content-between align-items-center">
+                            
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h3 class="last__title">Most popular</h3>
+                        <ul class="top__articles">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>  
+    </main>
+    <footer class="p-4">
+        <div class="container">
+            <hr>
+            <p class="text-center fw-4">© 2022 developer_773. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Carousel news -->
+    <template id="carousel__template">
+        <li class="carousel__item">
+            <a class="carousel__news-link" href="#">
+                <img class="carousel__news-img me-2" src="./images/diary-of-a-madman.jpg" width="675" height="450" alt="">
+                <div class="carousel__news-content-box"> 
+                    <h2 class="carousel__news-title">Trump Sharpie Has Now Scrawled Its Way Into the Trump Org Trial</h2>
+                    <time class="carousel__news-time"></time>
+                </div>
+            </a>
+        </li>
+    </template>
+    
+    <!--  news template --> 
+    <template id="template">
+        <li class="news__item">     
+            <a class="news__link" href="#">
+                <img class="news__img" src="" width="110" height="100" alt="Pepper's news">
+                <div class="news__content-box"> 
+                    <h4 class="news__title"></h4>
+                    <p class="news__date">         
+                        <time class="news__time"></time>
+                        <!-- <a class="news__link" href="#"></a> -->
+                    </p>        
+                </div>
+            </a>
+        </li>
+    </template>
+    <script src="./flickity.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
